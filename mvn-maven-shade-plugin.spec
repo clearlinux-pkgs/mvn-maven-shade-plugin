@@ -4,21 +4,21 @@
 #
 Name     : mvn-maven-shade-plugin
 Version  : 3.2.0
-Release  : 4
+Release  : 5
 URL      : https://github.com/apache/maven-shade-plugin/archive/maven-shade-plugin-3.2.0.tar.gz
 Source0  : https://github.com/apache/maven-shade-plugin/archive/maven-shade-plugin-3.2.0.tar.gz
 Source1  : https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-shade-plugin/3.2.0/maven-shade-plugin-3.2.0.jar
 Source2  : https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-shade-plugin/3.2.0/maven-shade-plugin-3.2.0.pom
 Source3  : https://repo1.maven.org/maven2/org/apache/maven/plugins/maven-shade-plugin/2.4.1/maven-shade-plugin-2.4.1.jar
 Source4  : https://repo1.maven.org/maven2/org/apache/maven/plugins/maven-shade-plugin/2.4.1/maven-shade-plugin-2.4.1.pom
-Source5  : https://repo1.maven.org/maven2/org/apache/maven/plugins/maven-shade-plugin/3.2.1/maven-shade-plugin-3.2.1.jar
-Source6  : https://repo1.maven.org/maven2/org/apache/maven/plugins/maven-shade-plugin/3.2.1/maven-shade-plugin-3.2.1.pom
+Source5  : https://repo1.maven.org/maven2/org/apache/maven/plugins/maven-shade-plugin/3.0.0/maven-shade-plugin-3.0.0.jar
+Source6  : https://repo1.maven.org/maven2/org/apache/maven/plugins/maven-shade-plugin/3.0.0/maven-shade-plugin-3.0.0.pom
+Source7  : https://repo1.maven.org/maven2/org/apache/maven/plugins/maven-shade-plugin/3.2.1/maven-shade-plugin-3.2.1.jar
+Source8  : https://repo1.maven.org/maven2/org/apache/maven/plugins/maven-shade-plugin/3.2.1/maven-shade-plugin-3.2.1.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0
 Requires: mvn-maven-shade-plugin-data = %{version}-%{release}
-BuildRequires : apache-maven
-BuildRequires : buildreq-mvn
 
 %description
 <!---
@@ -55,11 +55,17 @@ cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/plugin
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/plugins/maven-shade-plugin/2.4.1
 cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/plugins/maven-shade-plugin/2.4.1/maven-shade-plugin-2.4.1.pom
 
-mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/plugins/maven-shade-plugin/3.2.1
-cp %{SOURCE5} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/plugins/maven-shade-plugin/3.2.1/maven-shade-plugin-3.2.1.jar
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/plugins/maven-shade-plugin/3.0.0
+cp %{SOURCE5} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/plugins/maven-shade-plugin/3.0.0/maven-shade-plugin-3.0.0.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/plugins/maven-shade-plugin/3.0.0
+cp %{SOURCE6} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/plugins/maven-shade-plugin/3.0.0/maven-shade-plugin-3.0.0.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/plugins/maven-shade-plugin/3.2.1
-cp %{SOURCE6} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/plugins/maven-shade-plugin/3.2.1/maven-shade-plugin-3.2.1.pom
+cp %{SOURCE7} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/plugins/maven-shade-plugin/3.2.1/maven-shade-plugin-3.2.1.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/plugins/maven-shade-plugin/3.2.1
+cp %{SOURCE8} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/plugins/maven-shade-plugin/3.2.1/maven-shade-plugin-3.2.1.pom
 
 
 %files
@@ -69,6 +75,8 @@ cp %{SOURCE6} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/plugin
 %defattr(-,root,root,-)
 /usr/share/java/.m2/repository/org/apache/maven/plugins/maven-shade-plugin/2.4.1/maven-shade-plugin-2.4.1.jar
 /usr/share/java/.m2/repository/org/apache/maven/plugins/maven-shade-plugin/2.4.1/maven-shade-plugin-2.4.1.pom
+/usr/share/java/.m2/repository/org/apache/maven/plugins/maven-shade-plugin/3.0.0/maven-shade-plugin-3.0.0.jar
+/usr/share/java/.m2/repository/org/apache/maven/plugins/maven-shade-plugin/3.0.0/maven-shade-plugin-3.0.0.pom
 /usr/share/java/.m2/repository/org/apache/maven/plugins/maven-shade-plugin/3.2.0/maven-shade-plugin-3.2.0.jar
 /usr/share/java/.m2/repository/org/apache/maven/plugins/maven-shade-plugin/3.2.0/maven-shade-plugin-3.2.0.pom
 /usr/share/java/.m2/repository/org/apache/maven/plugins/maven-shade-plugin/3.2.1/maven-shade-plugin-3.2.1.jar
